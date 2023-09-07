@@ -6,19 +6,15 @@ additionalCatalogs:
     connector.name=hive-hadoop2
     hive.metastore.uri=thrift://my-hive-metastore:9083
     hive.s3.path-style-access=true
-    hive.s3.endpoint=http://my-minio:9000
-    hive.s3.aws-access-key=minio_access_key
-    hive.s3.aws-secret-key=minio_secret_key
+    hive.s3.endpoint=minio.trino.svc.cluster.local
+    hive.s3.aws-access-key=BBT4GY4P028M7SMBC6Y9
+    hive.s3.aws-secret-key=ZGkSh84bAtQfG69aZxP4HGHyACG0aMtkLb3XSwEG
     hive.non-managed-table-writes-enabled=true
     hive.s3select-pushdown.enabled=true
     hive.storage-format=ORC
     hive.allow-drop-table=true
-  # redis: |
-  #   connector.name=redis
-  #   redis.table-names=test
-  #   redis.nodes=my-redis-master:6379
-  #   redis.password=trino_demo_password
-  #   redis.table-description-dir=/etc/redis
+    hive.s3.ssl.enabled=false
+
 
 secretMounts:
   - name: redis-table-schema-volumn
